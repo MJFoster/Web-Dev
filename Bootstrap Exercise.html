@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Exercise</title>
+    <!--Bootstrap stylesheet, DOWNLOADED Latest compiled and minified CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootstrap stylesheet, Latest compiled and minified CSS -->
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" >-->
+</head>
+<body>
+    <section>
+        
+        <div class="panel panel-default">
+            
+            <!-- Start panel heading -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Visitor Information</h3>
+            </div>
+            
+            <!-- Start panel body -->
+            <div class="panel-body">
+                <form id="Contact Form">
+                    <!-- Prompt for Email Address -->
+                    <div class="form-group">
+                        <label for="emailIn">Email address</label>
+                        <input type="email" class="form-control" id="emailIn" placeholder="Email">
+                    </div>
+            
+                    <!-- Prompt for User Password -->
+                    <div class="form-group">
+                        <label for="passwordIn">Password</label>
+                        <input type="password" class="form-control" id="passwordIn" placeholder="Password">
+                    </div>
+                </form>
+        
+                <!-- Add button to SUBMIT data from form -->
+                <button type="button" class="btn btn-success active">Submit</button>  
+                
+                <!--Topics Taught At BCW  + Badges For My Favorites-->
+                <div>
+                    <h4><br>Topics I've Learned At Boise Code Work So Far<br></h4>
+                    <ul>
+                        <li>Git &amp Github</li>
+                        <li>HTML5  <span class="badge">**</span></li> <!--Add a Badge-->
+                        <li>CSS3</li>                        
+                        <li>Bootstrap  <span class="badge">**</span></li> <!--Add a Badge-->
+                    </ul>
+                </div>
+                            
+            </div>  <!-- End "panel-body" -->
+            
+            <!-- Start panel footer -->
+            <div class="panel-footer"><span>Thank You For Registering! See LinkedIn Profile Page Here</span>
+            
+                <!-- Use 'anchor' tag for hyperlink to LinkedIn Profile -->
+                <a href="https://www.linkedin.com/in/movingboise">
+                    <!-- Glyphicon within anchor goes here -->
+                    <span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="font-size: 25px; padding: 10px"></span>
+                    
+                    <!-- Image within anchor tag goes here -->
+                    <img src="img/Relaxed MJ.jpg" alt="Linked In Profile-MaryJo Foster" style="height: 50px; width: 40px; border-color: fuschia">
+                </a>
+            </div>  <!-- End "panel-footer" -->
+            
+        </div>  <!-- End "panel-default" -->
+
+    </section>
+</body>
+</html>
+
