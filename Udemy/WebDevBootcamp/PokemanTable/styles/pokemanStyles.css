@@ -12,3 +12,7 @@ table, th, td {
 th {
     font-weight: 900;
 }
+
+td > img {
+    width: 100px;
+}
