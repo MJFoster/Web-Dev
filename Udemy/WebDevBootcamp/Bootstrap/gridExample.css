@@ -4,6 +4,11 @@
     text-align: center;
 }
 
+.orange {
+    background-color: orange;
+    border: dashed 1px red;
+    height: 20px;
+}
 .day {
 
 }
