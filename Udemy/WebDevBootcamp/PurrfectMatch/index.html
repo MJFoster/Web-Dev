@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Purrfect Match</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-	<link rel="stylesheet" type="text/css" href="app.css">
+  <title>Purrfect Match</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700i" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" type="text/css" href="app.css">
+  <!-- Add responsive behavior for mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
- <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Purrfect Match</a>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-links"
+                aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Purrfect Match</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-collapse-links">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+ 
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+          <li><a href="#">Login <i class="fa fa-user" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Signup  <i class="fa fa-user-plus"></i></a></li>
-        <li><a href="#about">Login  <i class="fa fa-user"></i></a></li>
-      </ul>
+    <!-- /.container-fluid -->
+  </nav>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="content">
+          <h1>Purrfect Match</h1>
+          <h3>The Only Human-Feline Dating App</h3>
+          <hr>
+          <button class="btn btn-default btn-lg">
+            <i class="fa fa-paw" aria-hidden="true"></i> Get Started
+          </button>
+        </div>
+      </div>
     </div>
   </div>
- </nav>
 
- <div class="container">
- 	<div class="row">
- 		<div class="col-lg-12">
- 			<div class="content">
- 				<h1>Purrfect Match</h1>
- 				<h3>The Only Human-Feline Dating App</h3>
- 				<hr>
- 				<button class="btn btn-default btn-lg"><i class="fa fa-paw fa-fw"></i> Get Started!</button>
- 			</div>
- 		</div>
- 	</div>
- </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
 
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous">
 
-
+    </script>
 </body>
+
 </html>
