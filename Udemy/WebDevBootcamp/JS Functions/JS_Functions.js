@@ -24,6 +24,6 @@ function factorial(num) {
 
 /* Converts strings from Kabob case to snake case.
    Ie, replaces all '-' chars with '_' chars. */
-   function kabobToSnake(str() {
-    // Use String functions to replace all dashes with underscores
+   function kabobToSnake(str) {
+    return str.replace(/-/g, "_");  /* Use a regular expression to globally locate all dashes, and replace them */
    }
