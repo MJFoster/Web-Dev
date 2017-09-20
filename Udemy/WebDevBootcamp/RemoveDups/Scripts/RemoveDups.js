@@ -1,4 +1,4 @@
-var debug = true;
+var debug = 0;
 // if (debug) console.log("");
 
 var str = "";
@@ -11,8 +11,9 @@ if (debug) console.log("Original String: " + str);
 var newStr = "";
 var found = false;
 
-for (var i = 0; i < str.length - 1; i++) {
-    for (var j = i+1; j < str.length && !found; j++) {
+for (var i = 0; i < str.length; i++) {
+    // for (var j = i+1; j < str.length && !found; j++) {
+    for (var j = 0; j < i && !found; j++) {
         if (str.charAt(i) === str.charAt(j)) {
             found = true;
             if (debug) console.log("i: " + i + ", str(i): " + str.charAt(i) + ", j: " + j + ", str(j): " + str.charAt(j));
@@ -26,7 +27,10 @@ for (var i = 0; i < str.length - 1; i++) {
         found = false;
     }
 }
-newStr += str.charAt(str.length-1);
 
-console.log("Original String:\t" + str);
-console.log("New string:\t" + newStr);
+if (debug) {
+    console.log("Original String:\t" + str);
+    console.log("New string:\t" + newStr);
+}
+
+alert("Original String: " + str + "\nNew String: " + newStr);
