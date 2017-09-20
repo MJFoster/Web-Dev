@@ -32,5 +32,5 @@ if (debug) {
 }
 
 // Add newStr to the markup
-document.getElementById("original").innerHTML = str;
-document.getElementById("reversed").innerHTML = newStr;
+document.getElementById("original").textContent = str;
+document.getElementById("reversed").textContent = newStr;
