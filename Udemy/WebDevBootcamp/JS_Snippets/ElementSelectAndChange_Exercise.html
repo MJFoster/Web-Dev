@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>testing</title>
+    <!--For simplicity, we are defining style below instead of using a CSS stylesheet ...-->
+    <style type="text/css">
+        .big {
+            font-size: 100px;
+            color: orange;
+            border: 5px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>I am an h1</h1>
+    <p id="first" class="special">Hello</p>
+    <p class="special">Goodbye</p>
+    <p id="again">Hi Again</p>
+    <p id="almost-last">This has a <strong>strong</strong> tag embedded in the text.</p>
+    <p id="last">Goodbye Again</p>
+
+    <!-- Select the 1st <p> tag using different methods. -->
+    <script>
+        // console.log(document.getElementById("first"));
+        // console.log(document.querySelector("#first"));
+        // console.log(document.querySelectorAll("p")[0]);
+        // console.log(document.getElementsByClassName("special")[0]);
+        // console.log(document.getElementsByTagName("p")[0]);
+        // console.log(document.querySelector("h1 + p")); 
+
+        // Style changes can be applied to elements with the 'style' function.
+       var tag1 = document.getElementById("first");
+       tag1.style.color = "red";
+       tag1.style.border = "2px dashed blue";
+       tag1.style.fontSize = "14px";
+       tag1.style.backgroundColor = "black";
+       
+       var tag2 = document.getElementsByClassName("special")[1];
+       tag2.style.color = "white";
+       tag2.style.fontSize = "20px";
+       tag2.style.background = "purple";
+       tag2.style.width = "30%";
+
+       // Classes can be added, removed, and toggled (on-off) elements.
+       var tag3 = document.querySelector("#last");
+       tag3.classList.add("big");
+       tag3.classList.remove("big");
+       tag3.classList.toggle("big");
+
+       // How to manipulate the TEXT of a tag.  
+       //NOTE:  Any HTML that may be embedded in the tag is NOT selected, so be careful if
+       //       changing your text in any way!
+       var tag4 = document.querySelector("#again");
+       console.log("Text is: " + tag4.textContent);        // Gets the text only.
+       tag4.textContent = "Bye Again!";     // Changes the text.
+       console.log("Text is now: " + tag4.textContent);        // Gets the text only.
+
+       tag4 = document.querySelectorAll("p");  // all <p> tags are now selected.
+       for(var i = 0; i < 2; i++) {            // Iterate over just 2 tags & change text.
+            tag4[i].textContent = "Where did the text go???";
+       };
+
+       /* To select the text + any embedded, or 'inner', HTML.
+        NOTE:  Just like with "textContent", be careful when re-assigning it's value!
+        'innerHTML' is useful when injecting HTML onto a page 
+        or into empty elements like <div>'s, <p>'s, etc. */
+       
+       tag5 = document.querySelector("#almost-last");
+       console.log("innerHTML of tag5 is:  " + tag5.innerHTML);
+    </script>
+</body>
+</html>
