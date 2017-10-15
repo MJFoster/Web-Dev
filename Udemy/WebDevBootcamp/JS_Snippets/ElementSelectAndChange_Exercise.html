@@ -5,9 +5,16 @@
     <!--For simplicity, we are defining style below instead of using a CSS stylesheet ...-->
     <style type="text/css">
         .big {
-            font-size: 100px;
+            font-size: 50px;
             color: orange;
             border: 5px solid red;
+        }
+        
+        img {
+            height: 100px;
+            width: 125px;
+            display: block;
+            padding: 20px;
         }
 
     </style>
@@ -19,6 +26,9 @@
     <p id="again">Hi Again</p>
     <p id="almost-last">This has a <strong>strong</strong> tag embedded in the text.</p>
     <p id="last">Goodbye Again</p>
+    <a href="http:BoiseCityTaxi.com">Boise City Taxi</a>
+    <p id="image-text"></p>
+    <img src="Images/2009_SantaBarbara.jpg">
 
     <!-- Select the 1st <p> tag using different methods. -->
     <script>
@@ -30,44 +40,56 @@
         // console.log(document.querySelector("h1 + p")); 
 
         // Style changes can be applied to elements with the 'style' function.
-       var tag1 = document.getElementById("first");
-       tag1.style.color = "red";
-       tag1.style.border = "2px dashed blue";
-       tag1.style.fontSize = "14px";
-       tag1.style.backgroundColor = "black";
+       var idFirst = document.getElementById("first");
+       idFirst.style.color = "red";
+       idFirst.style.border = "2px dashed blue";
+       idFirst.style.fontSize = "14px";
+       idFirst.style.backgroundColor = "black";
        
-       var tag2 = document.getElementsByClassName("special")[1];
-       tag2.style.color = "white";
-       tag2.style.fontSize = "20px";
-       tag2.style.background = "purple";
-       tag2.style.width = "30%";
+       var classSpecial = document.getElementsByClassName("special")[1];
+       classSpecial.style.color = "white";
+       classSpecial.style.fontSize = "20px";
+       classSpecial.style.background = "purple";
+       classSpecial.style.width = "30%";
 
        // Classes can be added, removed, and toggled (on-off) elements.
-       var tag3 = document.querySelector("#last");
-       tag3.classList.add("big");
-       tag3.classList.remove("big");
-       tag3.classList.toggle("big");
+       var idLast = document.querySelector("#last");
+       idLast.classList.add("big");
+       idLast.classList.remove("big");
+       idLast.classList.toggle("big");
 
        // How to manipulate the TEXT of a tag.  
        //NOTE:  Any HTML that may be embedded in the tag is NOT selected, so be careful if
        //       changing your text in any way!
-       var tag4 = document.querySelector("#again");
-       console.log("Text is: " + tag4.textContent);        // Gets the text only.
-       tag4.textContent = "Bye Again!";     // Changes the text.
-       console.log("Text is now: " + tag4.textContent);        // Gets the text only.
+       var idAgain = document.querySelector("#again");
+       console.log("Text is: " + idAgain.textContent);        // Gets the text only.
+       idAgain.textContent = "Bye Again!";     // Changes the text.
+       console.log("Text is now: " + idAgain.textContent);        // Gets the text only.
 
-       tag4 = document.querySelectorAll("p");  // all <p> tags are now selected.
+       pTags = document.querySelectorAll("p");  // all <p> tags are now selected.
        for(var i = 0; i < 2; i++) {            // Iterate over just 2 tags & change text.
-            tag4[i].textContent = "Where did the text go???";
+            pTags[i].textContent = "Where did the text go???";
        };
 
        /* To select the text + any embedded, or 'inner', HTML.
         NOTE:  Just like with "textContent", be careful when re-assigning it's value!
         'innerHTML' is useful when injecting HTML onto a page 
         or into empty elements like <div>'s, <p>'s, etc. */
-       
-       tag5 = document.querySelector("#almost-last");
-       console.log("innerHTML of tag5 is:  " + tag5.innerHTML);
+       idAlmostLast = document.querySelector("#almost-last");
+       console.log("innerHTML of idAlmostLast is:  " + idAlmostLast.innerHTML);
+
+       // Modify attributes, like src, href, etc. to dynamically change the page.
+       var imgTag = document.querySelector("img");
+       var idImageText = document.querySelector("#image-text");
+       idImageText.textContent = "Santa Barbara Trip";
+       console.log("Original Image: " + imgTag.getAttribute("src"));
+       imgTag.setAttribute("src", "Images/myTeenageYears.jpg");
+       idImageText.innerHTML = "My Teenage Years!";
+       console.log("New Image: " + imgTag.getAttribute("src"));
+       // change link to Google
+       var aTag = document.querySelector("a");
+       aTag.setAttribute("href", "http://Google.com");
+       aTag.innerHTML = "Google.com";
     </script>
 </body>
 </html>
