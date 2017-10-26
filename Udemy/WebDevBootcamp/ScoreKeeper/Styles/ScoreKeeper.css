@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+html {
+    color: white;
+}
+
+.winner {
+    color: greenyellow;
+    font-size: 75px;
+}
