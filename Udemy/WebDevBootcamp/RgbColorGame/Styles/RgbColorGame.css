@@ -1,0 +1,34 @@
+.dark-background {
+    background-color: #232323;
+}
+
+.white-text {
+    color: white;
+}
+
+#banner {
+    width: 100%;
+    text-align: center;
+    background-color: blue;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    float: left;
+}
+
+.square {
+    background-color: yellow;
+    width: 30%;
+    margin: 1.66%;
+    padding-bottom: 30%;
+    float: left;
+}
+
+#squares-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
