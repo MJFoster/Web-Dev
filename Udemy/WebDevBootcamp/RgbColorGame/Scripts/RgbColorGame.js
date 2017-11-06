@@ -24,25 +24,31 @@ fillSquares();
 // Add a click event listener to each square.
 squares.forEach(function(square) {
     square.addEventListener("click", function() {
-        /* TODO:
-            -If background color of clicked element == goalColor,
-               * Update background colors of ALL squares AND banner to goalColor
-               * 'Try Again' >> 'Correct!'
-               * 'New Colors' >> 'Play Again?'
-            -Else
-               * addClass 'dark-background' to clicked square.
-               * Show 'Try Again' centered between 'NEW COLORS' and 'EASY'
-        */
+        if(this.style.backgroundColor === goalColor) {
+            /* Update colors[] */
+            colors.forEach(function(color, index) {
+
+            });
+            fillSquares();
+            /* update banner backgroundColor */
+            /* Add 'Try Again' or 'Correct' message on menu bar */
+            /* Add text 'New Colors' / 'Play Again?' to menu bar */
+        } else {
+            /* addClass 'dark-background' to clicked square. */
+            /* Show 'Try Again' centered between 'NEW COLORS' and 'EASY' */
+        }
     })
 });
 
 
+/* Fill all squares with colors currently in colors[] */
 function fillSquares() {
     squares.forEach(function(square, index) {
         square.style.backgroundColor = colors[index];
     });
 }
 
+/* Update the "RGB" text in bannaer.  */
 function displayGoalColor (color) {
     document.querySelector("#rgb-color").innerHTML = color;
 }
