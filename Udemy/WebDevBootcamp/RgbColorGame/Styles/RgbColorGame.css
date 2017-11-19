@@ -12,7 +12,14 @@
     background-color: blue;
 }
 
+#menu {
+    background-color: white;
+    text-align: center;
+    height: 30px;
+}
+
 #menu ul {
+    text-align: center;
     list-style: none;
 }
 
