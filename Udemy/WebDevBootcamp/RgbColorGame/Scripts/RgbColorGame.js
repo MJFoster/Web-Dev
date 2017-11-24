@@ -1,4 +1,8 @@
 var debug = true;
+var BODY_BACKGROUND_COLOR = "#232323";
+
+// Hard code body's backgroundColor property so it can be referenced in hideSquare().
+document.querySelector("body").style.backgroundColor = BODY_BACKGROUND_COLOR;
 
 // TODO update difficulty based on click event of hard/easy button
 var difficulty = "hard";
@@ -120,5 +124,5 @@ function setGoalColor() {
 
 /* Change background to match app background and simulate hiding */
 function hideSquare(square) {
-    square.style.backgroundColor = "#232323";
+    square.style.backgroundColor = document.querySelector("body").style.backgroundColor;
 }
